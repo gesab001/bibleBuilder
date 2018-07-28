@@ -6,7 +6,7 @@ import time
 
 def addVerse(book, chapter, verse, word):
         conn = sqlite3.connect('/home/giovanni/Dropbox/kjvtxt/kjv.db')
-        conn.execute("INSERT INTO BIBLE (BOOK, CHAPTER, VERSE, WORD) VALUES(?, ?, ?, ?)", (book, chapter, verse, word));
+        conn.execute("INSERT INTO BIBLE3 (BOOK, CHAPTER, VERSE, WORD) VALUES(?, ?, ?, ?)", (book, chapter, verse, word));
         conn.commit()
         print (book + " " + str(chapter) + ":" + str(verse) + " verse added successfully");
         conn.close()    
